@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Valentine's Letter — Open the envelope 💌</title>
+    <link rel="stylesheet" href="valentines.css">
+    <!-- handwriting font for the letter -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="valentines.js"></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <h1>Pentru tine 💘</h1>
+        <p class="subtitle">Apasă pentru a afișa scrisoarea. 🥰</p>
+      </header>
+
+      <section class="stage">
+        <div class="env-area">
+          <!-- EDIT YOUR MESSAGE: Put your message (plain text or small HTML) inside the <div id="letterContent"> below.
+               Use <br> for line breaks. To make the envelope auto-open when you share the page,
+               add data-open-on-load="true" to the <div id="envelope"> element (example: <div id=\"envelope\" data-open-on-load=\"true\" ...>).
+          -->
+          <div id="envelope" class="envelope" role="button" aria-pressed="false" tabindex="0">
+            <div class="envelope-flap"></div>
+
+            <div class="envelope-body">
+              <!-- Letter (editable) -->
+              <div id="letter" class="letter" aria-hidden="true">
+                <div class="paper">
+                  <!-- ----- EDIT YOUR MESSAGE HERE -----
+                       EXACT instructions:
+                       1) Edit the text between the <div id="letterContent"> and </div> to put your message.
+                       2) Use <br> for line breaks. Keep content short for best layout on mobile.
+                       3) To change the visible signature, edit the <div id="signature"> element below.
+                       4) To make the envelope auto-open when someone opens the page, add
+                          data-open-on-load="true" to the <div id="envelope"> element.
+                       Example: replace the sample text below with your own message.
+                  ----- -->
+                  <div id="letterContent" class="letter-content" data-placeholder="Click to open the letter...">
+                    Draga mea Anastasia,<br><br>
+                    Replace this text with your own message before you publish or share the page. Use <br> to make new lines. Keep it warm and short — it looks best on phones.
+                <br><br>
+                Mereu al tău,<br>
+                <strong>Valentin</strong>
+                    </div>
+                  <!-- ----- End editable message ----- -->
+                  <div class="signature" id="signature">— Love</div>
+                </div>
+              </div>
+
+              <div class="envelope-front">
+                <div class="seal">❤</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="toggleBtn" class="btn">Deschide scrisoarea</button>
+
+        <div id="hearts" class="floating-hearts" aria-hidden="true"></div>
+      </section>
+
+    </main>
+  </body>
+</html>
